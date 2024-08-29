@@ -1,13 +1,15 @@
-# [ICIP2024][MICRO-EXPRESSION RECOGNITION BASED ON 3DCNN COMBINED WITH GRU AND NEW ATTENTION MECHANISM]
+# [MLSP2024][ENHANCED FEATURE EXTRACTION AND ATTENTION MECHANISMS FOR MICRO-EXPRESSION RECOGNITION]
 
 ## Chun-Ting Fang, Tsung-Jung Liu, Kuan-Hsien Liu  
 
 ***
-> Abstract : Micro-expression, as a form of non-verbal emotional expression,play a key role in interpersonal interaction. However,
-they are also quite challenging and not easy to analyze. In this paper, we propose a dual-branch shallow 3DCNN architecture
-that combines GRU (Gated Recurrent Unit) and enhances the CAM (Channel Attention Module) in CBAM (Convolutional Block Attention Module)
-> to make it more suitable for recognizing micro facial expressions. Experiments show that the
-proposed method can achieve good results with a relatively simple architecture.
+> Abstract : Micro-expressions refer to subtle changes in expressions that are displayed by humans in a very short period of time. As a
+form of non-verbal emotional expression, micro-expressions can more accurately reflect an individual’s true inner feelings.
+We propose a shallow dual-branch 3DCNN architecture for the first stage of feature extraction. Additionally, we enhance
+and optimize the channel attention module (CAM) within the convolutional block attention module (CBAM). We then
+employ Gated Recurrent Unit (GRU) and Multi-Scale Multi-Head (MSMH) Self-Attention for the second stage of feature
+extraction.Tested on 3 different databases and obtained competitive scores and effects. Numerous experimental results
+show that our method can achieve good results with relatively simple input and architecture.
 
 
 ## Network Architecture  
@@ -15,10 +17,9 @@ proposed method can achieve good results with a relatively simple architecture.
 <table>
   <tr>
     <td colspan="2">
-  <img src = "https://github.com/dannyFan-0201/ICIP_2024/blob/main/img/architecture.PNG" alt="CMFNet" width="800"> </td>  
+  <img src = "https://github.com/dannyFan-0201/MLSP_2024/blob/main/img/architecture.PNG" alt="CMFNet" width="800"> </td>  
   </tr>
   </table>
-  <img src = "https://github.com/dannyFan-0201/ICIP_2024/blob/main/img/CBAM.PNG" alt="CMFNet" width="500">
 
 
 # Environment
@@ -77,7 +78,7 @@ python ME_model.py
 
 - MEGC2019 [SMIC Part] [SAMM Part] [CASME II Part]
 
-<img src="https://github.com/dannyFan-0201/ICIP_2024/blob/main/img/performance.PNG" width="1000" height="250">
+<img src="https://github.com/dannyFan-0201/MLSP_2024/blob/main/img/performance.PNG" width="1000" height="250">
 
 Both LOSO and MEGC2019 are employed for performance comparison between our proposed method and the
 State-of-the-Art (SOTA) method in terms of UF1 and UAR. The best and second-best scores are highlighted and underlined,
@@ -89,8 +90,13 @@ All training and testing base on same 1080Ti.
 - In the ablation experiment on SMIC, the effectiveness of weighted-Categorical Cross-Entropy and New Channel
   Attention was tested and evaluated, respectively. The basic architecture, 3DCNN+GRU, utilizes Categorical Cross-Entropy (CCE) as the loss function.
   
-  <img src="https://github.com/dannyFan-0201/ICIP_2024/blob/main/img/ab.PNG" width="500" height="100">
-
+  <img src="https://github.com/dannyFan-0201/MLSP_2024/blob/main/img/ab.PNG" width="500" height="150">
+  
+- The visualization of loss curves using Categorical Cross-Entropy on SMIC dataset.
+  <img src="https://github.com/dannyFan-0201/MLSP_2024/blob/main/img/CCE.PNG" width="500" height="250">
+  
+- The visualization of loss curves using Weighted Categorical Cross-Entropy on SMIC dataset.
+  <img src="https://github.com/dannyFan-0201/MLSP_2024/blob/main/img/WCCE.PNG" width="500" height="250">
 ---
 ## Contact
 If you have any question, feel free to contact danny80351@gmail.com
